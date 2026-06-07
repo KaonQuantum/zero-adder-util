@@ -1,5 +1,5 @@
 [package]
-name = "zero-adder-util"
+name = "leading-zero-util"
 version = "0.1.0"
 edition = "2024"
 
