@@ -16,6 +16,7 @@ If no path is provided, it operates on the current directory.
 |------|-------|-------------|
 | `--number <N>` | `-n` | Number of zeros to add or remove (default: 1) |
 | `--decrease` | `-d` | Remove leading zeros instead of adding them |
+| `--basic-add` | `-b` | Add zeros naively without normalizing across files |
 | `--help` | `-h` | Print help |
 | `--version` | `-V` | Print version |
 
@@ -41,14 +42,22 @@ Remove two leading zeros:
 leading-zero-util -d -n 2
 ```
 
+Add one zero naively (without normalizing):
+```
+leading-zero-util -b
+```
+
 ## How it works
 
 Only files whose names **end in digits** are renamed. The prefix (everything before the trailing number) is preserved.
 
-For example, with `-n 2`:
-- `track1` → `track001`
-- `episode10` → `episode0010`
-- `readme.txt` — skipped (doesn't end in a digit)
+By default, adding zeros **normalizes** across all files — it finds the shortest numeric suffix and pads everything to the same width plus the requested count. For example, with `-n 1` on `problem-1` and `problem-11`:
+- `problem-1` → `problem-01`
+- `problem-11` → `problem-11` (already at target width)
+
+With `--basic-add`, zeros are added naively without normalization:
+- `problem-1` → `problem-01`
+- `problem-11` → `problem-011`
 
 When removing zeros (`-d`), at least one digit is always kept — it will never reduce a number to an empty string.
 
