@@ -2,6 +2,11 @@
 name = "leading-zero-util"
 version = "0.2.0"
 edition = "2024"
+description = "A CLI utility to add or remove leading zeros from the numbers at the end of filenames"
+license = "MIT"
+repository = "https://github.com/VidurThammineni/leading-zero-util"
+keywords = ["cli", "rename", "files", "zeros"]
+categories = ["command-line-utilities"]
 
 [dependencies]
 clap = { version = "4.6.1", features = ["derive"] }
