@@ -63,9 +63,29 @@ When removing zeros (`-d`), at least one digit is always kept — it will never 
 
 ## Install
 
+### Via crates.io (recommended)
+
+If you have [Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html) installed:
+
 ```bash
+cargo install leading-zero-util
+```
+
+### From source
+
+Clone the repository and install locally:
+
+```bash
+git clone https://github.com/VidurThammineni/leading-zero-util
+cd leading-zero-util
 cargo install --path .
 ```
+
+### Installing Cargo
+
+If you don't have Cargo, install Rust (which includes Cargo) by following the instructions at https://www.rust-lang.org/tools/install.
+
+Then re-run the install command above.
 
 ## License
 
