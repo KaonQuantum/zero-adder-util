@@ -4,7 +4,7 @@ version = "0.2.0"
 edition = "2024"
 description = "A CLI utility to add or remove leading zeros from the numbers at the end of filenames"
 license = "MIT"
-repository = "https://github.com/VidurThammineni/leading-zero-util"
+repository = "https://github.com/KaonQuantum/zero-adder-util"
 keywords = ["cli", "rename", "files", "zeros"]
 categories = ["command-line-utilities"]
 

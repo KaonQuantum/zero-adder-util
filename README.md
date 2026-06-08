@@ -76,8 +76,8 @@ cargo install leading-zero-util
 Clone the repository and install locally:
 
 ```bash
-git clone https://github.com/VidurThammineni/leading-zero-util
-cd leading-zero-util
+git clone https://github.com/KaonQuantum/zero-adder-util
+cd zero-adder-util
 cargo install --path .
 ```
 
